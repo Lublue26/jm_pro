@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@category   Laurent
+@package    Laurent_Prerender
+@copyright  Copyright (c) 2011 Laurent Clouet
+@license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+@author     Laurent Clouet <laurent35240@gmail.com>
+-->
+<config>
+    <modules>
+        <Laurent_Prerender>
+            <version>1.0.2</version>
+        </Laurent_Prerender>
+    </modules>
+    <global>
+        <blocks>
+            <prerender>
+                <class>Laurent_Prerender_Block</class>
+            </prerender>
+        </blocks>
+        <helpers>
+            <prerender>
+                <class>Laurent_Prerender_Helper</class>
+            </prerender>
+        </helpers>
+        <models>
+            <prerender>
+                <class>Laurent_Prerender_Model</class>
+            </prerender>
+        </models>
+        <resources>
+            <prerender_setup>
+                <setup>
+                    <module>Laurent_Prerender</module>
+                </setup>
+            </prerender_setup>
+        </resources>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <prerender>
+                    <file>prerender.xml</file>
+                </prerender>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Laurent_Prerender>
+                    <files>
+                        <default>Laurent_Prerender.csv</default>
+                    </files>
+                </Laurent_Prerender>
+            </modules>
+        </translate>
+    </adminhtml>
+    <frontend>
+        <layout>
+            <updates>
+                <prerender>
+                    <file>prerender.xml</file>
+                </prerender>
+            </updates>
+        </layout>
+    </frontend>
+    <default>
+        <system>
+            <prerender>
+                <mode>guessing</mode>
+                <days_period>7</days_period>
+            </prerender>
+        </system>
+    </default>
+</config>

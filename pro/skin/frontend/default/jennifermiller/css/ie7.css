@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+#main-nav li, #main-nav li a, .page-nav .pages, .pages ol, .pages li, .page-nav .pages a {
+	zoom: 1;
+	display:inline;
+}
+
+#checkout-step-shipping_method .shipment-methods  li:last-child {
+    opacity: 0;
+}

@@ -1,0 +1,312 @@
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: Entity: line 57: parser error : Comment not terminated 
+&lt;!--&lt;cache&gt;
+          &lt;backend&gt;memcached&lt;/backend&gt;&lt;! in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:           &lt;backend&gt;memcached&lt;/backend&gt;&lt;!-- apc / memcached / empty=file --&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                                         ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:72: parser error : Opening and ending tag mismatch: global line 29 and cache in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:         &lt;/cache&gt;--&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                 ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:73: parser error : Opening and ending tag mismatch: config line 28 and global in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;/global&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:              ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:74: parser error : Extra content at the end of the document in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;admin&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: Entity: line 57: parser error : Comment not terminated 
+&lt;!--&lt;cache&gt;
+          &lt;backend&gt;memcached&lt;/backend&gt;&lt;! in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:           &lt;backend&gt;memcached&lt;/backend&gt;&lt;!-- apc / memcached / empty=file --&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                                         ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:72: parser error : Opening and ending tag mismatch: global line 29 and cache in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:         &lt;/cache&gt;--&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                 ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:73: parser error : Opening and ending tag mismatch: config line 28 and global in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;/global&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:              ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:74: parser error : Extra content at the end of the document in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;admin&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:20] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getRe in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:34:21] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getRe in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: Entity: line 57: parser error : Comment not terminated 
+&lt;!--&lt;cache&gt;
+          &lt;backend&gt;memcached&lt;/backend&gt;&lt;! in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:           &lt;backend&gt;memcached&lt;/backend&gt;&lt;!-- apc / memcached / empty=file --&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                                         ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:72: parser error : Opening and ending tag mismatch: global line 29 and cache in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:         &lt;/cache&gt;--&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                 ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:73: parser error : Opening and ending tag mismatch: config line 28 and global in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;/global&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:              ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:74: parser error : Extra content at the end of the document in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;admin&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: Entity: line 57: parser error : Comment not terminated 
+&lt;!--&lt;cache&gt;
+          &lt;backend&gt;memcached&lt;/backend&gt;&lt;! in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:           &lt;backend&gt;memcached&lt;/backend&gt;&lt;!-- apc / memcached / empty=file --&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                                         ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:72: parser error : Opening and ending tag mismatch: global line 29 and cache in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:         &lt;/cache&gt;--&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                 ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:73: parser error : Opening and ending tag mismatch: config line 28 and global in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;/global&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:              ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:74: parser error : Extra content at the end of the document in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;admin&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: Entity: line 57: parser error : Comment not terminated 
+&lt;!--&lt;cache&gt;
+          &lt;backend&gt;memcached&lt;/backend&gt;&lt;! in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:           &lt;backend&gt;memcached&lt;/backend&gt;&lt;!-- apc / memcached / empty=file --&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                                         ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:72: parser error : Opening and ending tag mismatch: global line 29 and cache in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:         &lt;/cache&gt;--&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                 ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:73: parser error : Opening and ending tag mismatch: config line 28 and global in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;/global&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:              ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:74: parser error : Extra content at the end of the document in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;admin&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:21] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getRe in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:34:22] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getRe in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:34:22] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: Entity: line 57: parser error : Comment not terminated 
+&lt;!--&lt;cache&gt;
+          &lt;backend&gt;memcached&lt;/backend&gt;&lt;! in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:22] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:           &lt;backend&gt;memcached&lt;/backend&gt;&lt;!-- apc / memcached / empty=file --&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:22] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                                         ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:22] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:72: parser error : Opening and ending tag mismatch: global line 29 and cache in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:22] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:         &lt;/cache&gt;--&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:22] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                 ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:22] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:73: parser error : Opening and ending tag mismatch: config line 28 and global in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:22] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;/global&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:22] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:              ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:22] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:74: parser error : Extra content at the end of the document in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:22] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;admin&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:22] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getRe in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:34:23] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getRe in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: Entity: line 57: parser error : Comment not terminated 
+&lt;!--&lt;cache&gt;
+          &lt;backend&gt;memcached&lt;/backend&gt;&lt;! in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:           &lt;backend&gt;memcached&lt;/backend&gt;&lt;!-- apc / memcached / empty=file --&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                                         ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:72: parser error : Opening and ending tag mismatch: global line 29 and cache in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:         &lt;/cache&gt;--&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                 ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:73: parser error : Opening and ending tag mismatch: config line 28 and global in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;/global&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:              ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:74: parser error : Extra content at the end of the document in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;admin&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getRe in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: Entity: line 57: parser error : Comment not terminated 
+&lt;!--&lt;cache&gt;
+          &lt;backend&gt;memcached&lt;/backend&gt;&lt;! in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:           &lt;backend&gt;memcached&lt;/backend&gt;&lt;!-- apc / memcached / empty=file --&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                                         ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:72: parser error : Opening and ending tag mismatch: global line 29 and cache in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:         &lt;/cache&gt;--&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                 ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:73: parser error : Opening and ending tag mismatch: config line 28 and global in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;/global&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:              ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:74: parser error : Extra content at the end of the document in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;admin&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:23] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:24] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getRe in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:34:24] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getRe in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:34:24] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Mage_Core_Model_Resource_Website))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('core_resource/w...', Object(Mage_Core_Model_Resource_Website))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('core/website_co...', Object(Mage_Core_Model_Resource_Website))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getResourceModel('core/website_co...', Object(Mage_Core_Model_Resource_Website))
+#5 in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:34:24] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Mage_Core_Model_Resource_Website))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('core_resource/w...', Object(Mage_Core_Model_Resource_Website))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('core/website_co...', Object(Mage_Core_Model_Resource_Website))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getResourceModel('core/website_co...', Object(Mage_Core_Model_Resource_Website))
+#5 in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:34:45] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: Entity: line 57: parser error : Comment not terminated 
+&lt;!--&lt;cache&gt;
+          &lt;backend&gt;memcached&lt;/backend&gt;&lt;! in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:45] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:           &lt;backend&gt;memcached&lt;/backend&gt;&lt;!-- apc / memcached / empty=file --&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:45] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                                         ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:45] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:72: parser error : Opening and ending tag mismatch: global line 29 and cache in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:45] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:         &lt;/cache&gt;--&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:45] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                 ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:45] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:73: parser error : Opening and ending tag mismatch: config line 28 and global in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:45] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;/global&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:45] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:              ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:45] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:74: parser error : Extra content at the end of the document in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:45] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;admin&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:45] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:46] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: Entity: line 57: parser error : Comment not terminated 
+&lt;!--&lt;cache&gt;
+          &lt;backend&gt;memcached&lt;/backend&gt;&lt;! in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:46] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:           &lt;backend&gt;memcached&lt;/backend&gt;&lt;!-- apc / memcached / empty=file --&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:46] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                                         ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:46] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:72: parser error : Opening and ending tag mismatch: global line 29 and cache in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:46] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:         &lt;/cache&gt;--&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:46] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:                 ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:46] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:73: parser error : Opening and ending tag mismatch: config line 28 and global in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:46] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;/global&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:46] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:              ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:46] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: /home/admin/public_html/app/etc/local.xml:74: parser error : Extra content at the end of the document in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:46] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     &lt;admin&gt; in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:46] PHP Warning:  simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]:     ^ in /home/admin/public_html/app/Mage.php on line 689
+[27-Nov-2013 14:34:46] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getRe in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:34:46] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getRe in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:35:43] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Mage_Core_Model_Resource_Website))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('core_resource/w...', Object(Mage_Core_Model_Resource_Website))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('core/website_co...', Object(Mage_Core_Model_Resource_Website))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getResourceModel('core/website_co...', Object(Mage_Core_Model_Resource_Website))
+#5 in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:35:43] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Mage_Core_Model_Resource_Website))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('core_resource/w...', Object(Mage_Core_Model_Resource_Website))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('core/website_co...', Object(Mage_Core_Model_Resource_Website))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getResourceModel('core/website_co...', Object(Mage_Core_Model_Resource_Website))
+#5 in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:35:43] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Mage_Core_Model_Resource_Website))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('core_resource/w...', Object(Mage_Core_Model_Resource_Website))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('core/website_co...', Object(Mage_Core_Model_Resource_Website))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getResourceModel('core/website_co...', Object(Mage_Core_Model_Resource_Website))
+#5 in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:36:52] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getRe in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:40:10] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getRe in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:41:42] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getRe in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[27-Nov-2013 14:42:11] PHP Fatal error:  Uncaught exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in /home/admin/public_html/lib/Varien/Data/Collection/Db.php:180
+Stack trace:
+#0 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource/Db/Collection/Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1350): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#2 /home/admin/public_html/app/code/core/Mage/Core/Model/Config.php(1386): Mage_Core_Model_Config->getModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#3 /home/admin/public_html/app/Mage.php(460): Mage_Core_Model_Config->getResourceModelInstance('shoppercategori...', Object(Queldorei_Shoppercategories_Model_Mysql4_Shoppercategories))
+#4 /home/admin/public_html/app/code/core/Mage/Core/Model/Abstract.php(208): Mage::getRe in /home/admin/public_html/lib/Varien/Data/Collection/Db.php on line 180
+[03-Feb-2014 02:30:10] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1040] Too many connections' in /home/admin/public_html/lib/Zend/Db/Adapter/Pdo/Abstract.php:129
+Stack trace:
+#0 /home/admin/public_html/lib/Zend/Db/Adapter/Pdo/Abstract.php(129): PDO->__construct('mysql:host=loca...', 'topsearc_jenni', '8IKZ^3%$Lirv', Array)
+#1 /home/admin/public_html/lib/Zend/Db/Adapter/Pdo/Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+#2 /home/admin/public_html/lib/Varien/Db/Adapter/Pdo/Mysql.php(300): Zend_Db_Adapter_Pdo_Mysql->_connect()
+#3 /home/admin/public_html/lib/Zend/Db/Adapter/Abstract.php(459): Varien_Db_Adapter_Pdo_Mysql->_connect()
+#4 /home/admin/public_html/lib/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('SET NAMES utf8', Array)
+#5 /home/admin/public_html/lib/Varien/Db/Adapter/Pdo/Mysql.php(389): Zend_Db_Adapter_Pdo_Abstract->query('SET NAMES utf8', Array)
+#6 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource.php(169): Varien_Db_Adapter_Pdo_Mysql->query('SET NAMES u in /home/admin/public_html/lib/Zend/Db/Adapter/Pdo/Abstract.php on line 144
+[03-Feb-2014 02:30:18] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1040] Too many connections' in /home/admin/public_html/lib/Zend/Db/Adapter/Pdo/Abstract.php:129
+Stack trace:
+#0 /home/admin/public_html/lib/Zend/Db/Adapter/Pdo/Abstract.php(129): PDO->__construct('mysql:host=loca...', 'topsearc_jenni', '8IKZ^3%$Lirv', Array)
+#1 /home/admin/public_html/lib/Zend/Db/Adapter/Pdo/Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+#2 /home/admin/public_html/lib/Varien/Db/Adapter/Pdo/Mysql.php(300): Zend_Db_Adapter_Pdo_Mysql->_connect()
+#3 /home/admin/public_html/lib/Zend/Db/Adapter/Abstract.php(459): Varien_Db_Adapter_Pdo_Mysql->_connect()
+#4 /home/admin/public_html/lib/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('SET NAMES utf8', Array)
+#5 /home/admin/public_html/lib/Varien/Db/Adapter/Pdo/Mysql.php(389): Zend_Db_Adapter_Pdo_Abstract->query('SET NAMES utf8', Array)
+#6 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource.php(169): Varien_Db_Adapter_Pdo_Mysql->query('SET NAMES u in /home/admin/public_html/lib/Zend/Db/Adapter/Pdo/Abstract.php on line 144
+[03-Feb-2014 08:43:58] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1040] Too many connections' in /home/admin/public_html/lib/Zend/Db/Adapter/Pdo/Abstract.php:129
+Stack trace:
+#0 /home/admin/public_html/lib/Zend/Db/Adapter/Pdo/Abstract.php(129): PDO->__construct('mysql:host=loca...', 'topsearc_jenni', '8IKZ^3%$Lirv', Array)
+#1 /home/admin/public_html/lib/Zend/Db/Adapter/Pdo/Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+#2 /home/admin/public_html/lib/Varien/Db/Adapter/Pdo/Mysql.php(300): Zend_Db_Adapter_Pdo_Mysql->_connect()
+#3 /home/admin/public_html/lib/Zend/Db/Adapter/Abstract.php(459): Varien_Db_Adapter_Pdo_Mysql->_connect()
+#4 /home/admin/public_html/lib/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('SET NAMES utf8', Array)
+#5 /home/admin/public_html/lib/Varien/Db/Adapter/Pdo/Mysql.php(389): Zend_Db_Adapter_Pdo_Abstract->query('SET NAMES utf8', Array)
+#6 /home/admin/public_html/app/code/core/Mage/Core/Model/Resource.php(169): Varien_Db_Adapter_Pdo_Mysql->query('SET NAMES u in /home/admin/public_html/lib/Zend/Db/Adapter/Pdo/Abstract.php on line 144

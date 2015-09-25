@@ -1,0 +1,5 @@
+[07-Feb-2014 09:40:54] PHP Warning:  require_once(../Mage.php): failed to open stream: No such file or directory in /home/admin/public_html/shell/rules.php on line 1
+[07-Feb-2014 09:40:54] PHP Fatal error:  require_once(): Failed opening required '../Mage.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/admin/public_html/shell/rules.php on line 1
+[07-Feb-2014 09:46:26] PHP Parse error:  syntax error, unexpected T_STRING in /home/admin/public_html/shell/cache.php on line 5
+[07-Feb-2014 09:47:08] PHP Warning:  require_once(..app/Mage.php): failed to open stream: No such file or directory in /home/admin/public_html/shell/cache.php on line 2
+[07-Feb-2014 09:47:08] PHP Fatal error:  require_once(): Failed opening required '..app/Mage.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/admin/public_html/shell/cache.php on line 2

@@ -1,0 +1,55 @@
+<div id="page:main-container">
+<div class="content-header">
+    <table cellspacing="0">
+        <tbody><tr>
+            <td style="width:50%;"><h3 class="icon-head head-report-product-sold"><?php echo Mage::helper('mreport')->__('Management-Report')?></h3></td>
+            <td class="form-buttons"></td>
+        </tr>
+    </tbody></table>
+</div>
+<div>
+<form method="get" action="<?php echo $this->getUrl('*/*/export')?>">
+<div id="gridProductsSold">
+        <table cellspacing="0" class="actions">
+            <tbody><tr>
+                    <td class="a-left filter">
+                <div class="f-left">
+                    <div><?php echo Mage::helper('mreport')->__('From')?>:&nbsp;<input class="input-text no-changes required-entry" type="text" id="period_date_from" name="report_from" style="width:5em"> <img src="<?php echo $this->getSkinUrl("images/grid-cal.gif")?>" title="Select Date" id="period_date_from_trig" alt="Select Date" class="v-middle">&nbsp;&nbsp;</div>
+                    <div id="period_date_from_advaice"></div>
+                </div>
+
+                <div class="f-left">
+                    <div><?php echo Mage::helper('mreport')->__('till')?>:&nbsp;<input class="input-text no-changes required-entry" type="text" id="period_date_to" name="report_to" style="width:5em"> <img src="<?php echo $this->getSkinUrl("images/grid-cal.gif")?>" class="v-middle" title="Select Date" id="period_date_to_trig" alt="Select Date">&nbsp;&nbsp;</div>
+                    <div id="period_date_to_advaice"></div>
+                </div>
+
+                <div class="f-left">
+                  <img src="<?php echo $this->getSkinUrl("images/icon_export.gif")?>" alt="" class="v-middle">&nbsp; <button id="" type="submit" class="scalable task" style=""><span><?php echo Mage::helper('mreport')->__("Export")?></span></button>            </td>
+       
+                <script type="text/javascript">
+                <!--
+                Calendar.setup({
+                    inputField : 'period_date_from',
+                    ifFormat : '%e/%m/%y',
+                    button : 'period_date_from_trig',
+                    align : 'Bl',
+                    singleClick : true
+                });
+                Calendar.setup({
+                    inputField : 'period_date_to',
+                    ifFormat : '%e/%m/%y',
+                    button : 'period_date_to_trig',
+                    align : 'Bl',
+                    singleClick : true
+                });
+                //-->
+                </script>
+            </td>
+                            <td class="a-right">
+                    </tr>
+        </tbody></table>
+    
+    </div>
+</div>
+</form>
+                        </div>

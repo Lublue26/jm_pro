@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layouts>
+    <default>
+        <reference name="head">
+        	 
+        	<action method="addItem">
+        		<type>skin_css</type>
+        		<file>css/tegdesign_emailcollector/styles.css</file>
+        	</action>
+        	<block type="page/html_head" name="tegdesign_emailcollector_head" template="tegdesign_emailcollector/head.phtml" />
+        </reference>
+    </default>
+</layouts>

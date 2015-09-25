@@ -1,0 +1,132 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+
+/**
+ * Product view template
+ *
+ * @see Mage_Catalog_Block_Product_View
+ * @see Mage_Review_Block_Product_View
+ */
+?>
+            <?php
+                /**
+                 * Determine the previous/next link and link to current category
+                 */
+                $_ccat        = $this->helper('catalog/data')->getCategory();
+                $ppos         = $_ccat->getProductsPosition();
+                $current_pid  = $this->helper('catalog/data')->getProduct()->getId();
+                // build array from products positions
+                $plist = array();
+                foreach ($ppos as $pid => $pos) {
+                    $plist[] = $pid;
+                }
+                $curpos   = array_search($current_pid, $plist);
+                // get link for prev product
+                $previd   = isset($plist[$curpos+1])? $plist[$curpos+1] : $current_pid;
+                $product  = Mage::getModel('catalog/product')->load($previd);
+                $prevpos  = $curpos;
+                while (!$product->isVisibleInCatalog()) {
+                    $prevpos += 1;
+                    $nextid   = isset($plist[$prevpos])? $plist[$prevpos] : $current_pid;
+                    $product  = Mage::getModel('catalog/product')->load($nextid);
+                }
+                $prev_url = $product->getProductUrl();
+                // get link for next product
+                $nextid   = isset($plist[$curpos-1])? $plist[$curpos-1] : $current_pid;
+                $product  = Mage::getModel('catalog/product')->load($nextid);
+                $nextpos  = $curpos;
+                while (!$product->isVisibleInCatalog()) {
+                    $nextpos -= 1;
+                    $nextid   = isset($plist[$nextpos])? $plist[$nextpos] : $current_pid;
+                    $product  = Mage::getModel('catalog/product')->load($nextid);
+                }
+                $next_url = $product->getProductUrl();
+                // get link for current category
+                $more_url = $_ccat->getUrl(); 
+            ?>
+                      
+            
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+<div class="a_prodview">
+  <div class="a_category"><span style="text-transform:uppercase;"><?php echo ($this->getProduct()->getCategory() ? $this->getProduct()->getCategory()->getName() : 'no category') ?></span>&nbsp;&nbsp;&nbsp;<a href="<?php echo $this->getUrl('') ?><?php echo ($this->getProduct()->getCategory() ? $this->getProduct()->getCategory()->getName() : 'no category') ?>" class="dont">back</a>&nbsp;|&nbsp;<a href="<?= $next_url; ?>" class="dont">prev</a>&nbsp;|&nbsp;<a href="<?= $prev_url; ?>" class="dont">next</a></div>
+  <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+  <?php $_product = $this->getProduct() ?>
+  <form action="<?php echo $this->getAddToCartUrl($_product) ?>" method="post" id="product_addtocart_form">
+    <div class="product-img-box"> <?php echo $this->getChildHtml('media') ?> </div>
+    <div class="product-shop"><span class="a_prod_name"><?php echo $this->htmlEscape($_product->getName()) ?></span> <?php echo $this->getChildHtml('alert_urls') ?> <?php echo $this->getChildHtml('product_type_data') ?>
+      <?php if (!$this->hasOptions()):?>
+      <?php echo $this->getChildHtml('tierprices') ?>
+      <?php else:?>
+      
+      <?php endif; ?>
+      <?php if ($_description = $this->getChildHtml('description')):?>
+      <div class="collateral-box">
+        <?php echo $_description ?> </div>
+      <?php endif;?>
+	  <?php if (!$this->hasOptions()):?>
+      <div class="add-to-holder">
+        <?php if($_product->isSaleable()): ?>
+        <?php echo $this->getChildHtml('addtocart') ?>
+        <?php endif; ?>
+      </div>
+      <?php else:?>
+      <?php endif; ?>
+      <fieldset class="no-display">
+      <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+      <input type="hidden" name="related_product" id="related-products-field" value="" />
+      </fieldset>
+  <?php echo $this->getChildHtml('upsell_products') ?>
+  <?php //echo $this->getChildHtml('more') ?>
+      <?php echo $this->getChildHtml('other');?>
+      <?php if ($this->hasOptions()):?>
+      <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+      <?php endif;?>
+      <?php if ($this->canEmailToFriend()): ?>
+	  <p>&nbsp;</p>
+      <a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>" style="color:#94639a; font-size:12px;">TELL A FRIEND</a><br />
+      <?php endif; ?>
+    <?php if ($this->hasOptions()):?>
+    <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+    <?php endif;?>
+    </div>
+    <div class="clear"></div>
+  </form>
+  <script type="text/javascript">
+            var productAddToCartForm = new VarienForm('product_addtocart_form');
+            productAddToCartForm.submit = function(){
+                    if (this.validator.validate()) {
+                            this.form.submit();
+                    }
+            }.bind(productAddToCartForm);
+    </script>
+  <?php if ($_additional = $this->getChildHtml('additional')):?>
+  <div class="collateral-box">
+    <div class="head">
+      <h4><?php echo $this->__('Additional Information') ?></h4>
+    </div>
+    <?php echo $_additional ?> </div>
+  <?php endif;?>
+</div>
+<style>
+.side-col {display:none;}
+.product-options {clear:right;}
+</style>

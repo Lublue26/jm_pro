@@ -1,0 +1,533 @@
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/******************************************/
+/***********[ Mage_CSS_A Reset ]***********/
+/******************************************/
+/*******************************************
+HTML TAGS
+********************************************/
+body {
+	margin:0;
+	padding:0;
+	font-family:"Century Gothic", Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#6E6773;
+}
+a {
+	text-decoration:none;
+	color:inherit;
+	outline:none;
+}
+a:hover {
+	text-decoration:underline;
+}
+a img {
+	border:none;
+}
+.hr {
+border-bottom:1px solid #C9C9C9;
+margin:10px auto;
+padding-top:8px;
+width:auto;
+}
+
+.cms-index-index label{line-height: 20px;}
+input[type="submit"], button {
+background-color:#600080;
+border:medium none;
+color:#FFFFFF;
+font-family:"Century Gothic",Arial,Helvetica,sans-serif;
+font-size:10.5px;
+padding: 3px 6px;
+}
+
+#newsletter {
+color: #999;
+font-size: 10px;
+margin-right: 4px;
+width: 120px;
+}
+
+.call-to {
+
+background:#7f6999 none repeat scroll 0 0;
+border:medium double;
+color:#FFFFFF;
+font-size:12px;
+
+padding:16px;
+}
+
+button[disabled]:active, button[disabled],
+input[type="reset"][disabled]:active,
+input[type="reset"][disabled],
+input[type="button"][disabled]:active,
+input[type="button"][disabled],
+select[disabled] > input[type="button"],
+select[disabled] > input[type="button"]:active,
+input[type="submit"][disabled]:active,
+input[type="submit"][disabled] { background-color:#F4F4F4; color:#999; }
+
+
+
+#about{float:right; padding: 10px 0px 10px  30px; margin-bottom:20px; width:650px;}
+#about-pic{ position:relative; float:right; top:0px; padding: 0px  0px 10px 20px; }
+
+/***************************************
+GENERAL CLASSES
+****************************************/
+.left {
+	float:left;
+}
+.right {
+	float:right;
+}
+.clearer {
+	clear:both;
+}
+/***************************************
+CONTAINERS
+****************************************/
+#border-container {
+	border:solid 1px #DDD;
+	padding:5px 10px;
+	width:935px;
+	margin:10px auto;
+}
+#static-height-container {
+	background-image:url(../images/bg_static2.png);
+	background-repeat:repeat-x;
+	display:block;
+	width:auto;
+	/* height:662px; */
+	overflow:hidden;
+	padding-bottom:5px;
+	min-height: 600px;
+}
+
+#spacer{height:20px;}
+/*******************************************
+HEADER
+********************************************/
+#logo {
+	margin:10px 0 0 20px;
+}
+#mini-cart {
+	color:#69208B;
+	text-transform:uppercase;
+	text-align:right;
+	padding:15px 15px 7px 0;
+	font-size:11px;
+}
+#main-nav {
+	text-align:right;
+	padding:0 15px 0 0;
+	text-transform:uppercase;
+	font-size:11px;
+	color:#6E6773;
+}
+#main-nav ul, #main-nav li {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+#main-nav li {
+	background-image:url(../images/ball-pink.gif);
+	background-repeat:no-repeat;
+	background-position:left;
+	padding-left:10px;
+}
+#main-nav li.first {
+	background-image:none;
+	padding-left:0;
+}
+#main-nav li, #main-nav li a {
+	display: -moz-inline-box;
+display:inline-block;
+}
+#main-nav li a {
+}
+#main-nav li a.first {
+}
+#main-nav li a.selected {
+	color:#600080;
+}
+/******************************************
+LEFT SIDE (SIDEBAR/NAV)
+*******************************************/
+#left-side, .slidebar {
+	width:190px;
+	display:block;
+	text-align: left;
+	margin:15px 0 0 15px;
+	font-size:11px;
+}
+
+.century{ text-transform: uppercase; font-size: 14px; color:#6E6773;}
+
+.script {}
+#left-side h1, .slidebar h1 {
+	font-size:14px;
+	color:#6E6773;
+	font-weight:normal;
+	margin:7px 0;
+}
+#left-side h2, .slidebar h2 {
+	margin:0;
+	color:#600080;
+	font-size:24px;
+	font-weight:normal;
+	text-transform:capitalize;
+}
+#left-side h3, .slidebar h3 {
+	margin:0;
+	color:#600080;
+	font-size:11px;
+	font-weight:normal;
+}
+#left-side span, .slidebar span {
+	color:#6E6773;
+}
+#left-side #nav-box, .slidebar #nav-box {
+	display:block;
+	height:350px;
+	min-height:350px;
+	height:auto;
+width:190px;
+}
+#left-side ul, #left-side li {
+	margin:0;
+	padding:0;
+	list-style:none;
+	font-size:11px;
+	color:#6E6773;
+	text-transform:uppercase;
+}
+#left-side li {
+	margin:5px 0;
+}
+#left-side li a {
+	display:block;
+	width:auto;
+}
+#left-side li a.selected, #left-side li.active {
+	background-image:url(../images/ball-pink.gif);
+	background-repeat:no-repeat;
+	background-position:left;
+	padding-left:14px;
+	color:#600080;
+}
+#left-side li.active li {
+	background-image:none;
+	padding-left:0;
+}
+/******************************************
+RIGHT SIDE
+*******************************************/
+#right-side {
+	width:710px;
+	display:block;
+	margin:15px 15px 0 0;
+}
+/******************************************
+HOME PAGE
+*******************************************/
+#home {
+/*
+background-image:url(../images/home-bg.jpg);
+background-position:right top;
+background-repeat:no-repeat;
+*/
+height:auto;
+margin-left:30px;
+margin-top:0;
+min-height:531px;
+min-width:688px;
+padding-left:0;
+text-align:left;
+width:688px;
+}
+
+#home h1 {
+	color:#F546FF;
+	font-size:28px;
+	font-weight:normal;
+	margin:0;
+	padding:0px;
+	line-height: 5px;
+}
+#home p {
+	font-size:13px;
+}
+#home a {
+	color:#6D4184;
+}
+
+
+#main-img {
+float:right;
+position:relative;
+top:-46px;
+}
+
+#jewel-landing {
+float:right;
+margin-right: 100px;
+}
+
+#feature {
+float:left;
+padding-left:26px;
+padding-right:26px;
+
+}
+
+#below-feature {
+float:left;
+margin:0 10px 10px 29px;
+position:relative;
+top:0px;
+width:655px;
+}
+
+
+/******************************************
+TRUNK SHOWS PAGE
+*******************************************/
+
+#trunk {
+	background-image:url(../images/ruby.jpg);
+	background-repeat:no-repeat;
+	background-position:right, top;
+	min-height:541px;
+	height:541px;
+	height:auto;
+	min-width:580px;
+	width:580px;
+	text-align:left;
+	margin-left:80px;
+}
+
+
+
+#trunk h1 {
+	color:#F546FF;
+	font-size:42px;
+	font-weight:normal;
+	margin:0;
+}
+#trunk p {
+	font-size:13px;
+	width: 250px;
+	padding-left: 300px;
+}
+#trunk a {
+	color:#6D4184;
+}
+
+
+
+
+/******************************************
+TERMS PAGE
+*******************************************/
+
+#terms {
+min-height:541px;
+	height:541px;
+	height:auto;
+	min-width:580px;
+	width:580px;
+	text-align:left;
+	margin-left:80px;
+}
+
+
+
+
+/*Address Blocks
+*************************/
+#address1{float:left width:180px;
+pading: 2px 1px 3px 5px;}
+
+#address2{float:right width:180px;
+pading: 2px 1px 3px 5px;}
+
+#address3{float:left width:180px;
+pading: 2px 1px 3px 5px;}
+
+#address4{float:right width:180px;
+pading: 2px 1px 3px 5px;}
+
+
+/***************************************
+PRODUCTS PAGE
+****************************************/
+#product-table {
+	width:100%;
+	margin-left:30px;
+/* 	height:450px; */
+	overflow:hidden;
+}
+#product-table .thumb {
+	width:170px;
+	height:213px;
+	display:block;
+	background-image:url(../images/box-small.png);
+	background-repeat:no-repeat;
+	margin:0 0 10px;
+}
+#product-table .thumb img {
+height:194px;
+margin-top:-2px;
+width:154px;
+}
+
+.page-nav {
+	font-size:10px;
+	color:#600080;
+	width:auto;
+	text-align:right;
+	margin:15px;
+	position:relative;
+}
+.page-nav .pages {
+	display: -moz-inline-box;
+display:inline-block;
+	margin-right:18px;
+}
+.pages ol, .pages li {
+	display: -moz-inline-box;
+display:inline-block;
+	list-style:none;
+}
+.page-nav .pages a {
+	display: -moz-inline-box;
+display:inline-block;
+	padding:0 2px;
+}
+.page-nav a:hover, .page-nav a.current {
+	color:#FF66FF;
+	text-decoration:underline;
+}
+.current, on {
+	color:#FFF;
+	text-decoration:none;
+	font-weight:bold;
+	background-color:#FF66FF;
+	font-weight:bold;
+}
+/***************************************************
+SINGLE PRODUCT DETAIL
+****************************************************/
+#product-detail {
+	width:670px;
+	float:right;
+	clear:both;
+}
+#product-detail a:hover {
+	color:#FF66FF;
+}
+#product-detail .page-nav {
+display:block;
+margin:10px 10px 9px 0;
+text-align:left;
+}
+#product-detail .category {
+	text-transform:uppercase;
+	margin-right:12px;
+}
+#product-detail #image-holder {
+
+display:block;
+height:350px;
+margin:auto;
+text-align:center;
+width:250px;
+}
+.product-shop {
+margin-right:5px;
+position:relative;
+top:0px;
+width:300px;
+}
+.product-shop p {
+	margin:3px 0;
+}
+.a_prod_name {
+font-size:12px;
+text-transform:uppercase;
+}
+.availability {
+	display:none;
+}
+.price-box {
+	color:#600080;
+	font-size:16px;
+}
+.product-specs {
+	font-size:11px;
+}
+.tell-a-friend {
+	display:block;
+	color:#FF66FF;
+	margin:10px 0;
+}
+.required {
+	text-align:right;
+	font-size:10px;
+	color:#F0F;
+}
+.price {
+}
+.informational, .legality {
+	display:none;
+}
+#footer {
+	margin:10px auto;
+		line-height:1.2em;
+	padding-bottom:15px;
+
+	width:935px;
+}
+#footer a { color:inherit; }
+
+.on { text-decoration:underline; color: magenta;  }
+
+
+
+/*
+#checkout-step-shipping_method #checkout-shipping-method-load .shipment-methods  li:last-child {
+    opacity: 0; visibility: hidden !important; filter: alpha(opacity = 0);
+}
+*/
+
+
+#checkout-step-shipping_method #checkout-shipping-method-load .shipment-methods ul { height:26px; overflow:hidden; line-height: 30px;}
+
+.categorypath-jewelry-samantha-yanks-for-jennifer-miller .category-head h2 , .categorypath-jewelry-samantha-yanks-for-jennifer-miller .category-description {display:none;}
+
+.categorypath-jewelry-samantha-yanks-for-jennifer-miller  #right-side {margin: -30px 15px 0 0;}
+
+.categorypath-jewelry-on-trend-with-jen .category-head h2 {display:none;}
+

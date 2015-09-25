@@ -1,0 +1,41 @@
+/**~~ Theme Customize ~~**/
+/***** iPad Smaller than 959px *****/
+
+.cms-trunk-shows .col-main  .std{
+    overflow:  hidden;
+}
+
+.cms-trunk-shows .col-main  .std img{
+    max-width: 100%;
+}
+
+.blck_trunkshow{
+    display:  none;
+}
+
+@media only screen and (max-width: 767px) {
+    .blck_trunkshow{
+        display:  block;
+        z-index: 12;
+    }
+    .blck_trunkshow .block-control{
+        z-index: -1;
+    }
+}
+
+/*
+@media only screen and (max-width: 959px) {
+    
+}
+
+@media only screen and (max-width: 490px) {
+    
+}
+
+@media only screen and  (max-width: 330px) {
+
+}
+*/
+
+/* ======================================================================================= */
+

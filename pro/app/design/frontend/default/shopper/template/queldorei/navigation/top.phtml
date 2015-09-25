@@ -1,0 +1,128 @@
+<?php
+/**
+ * Top menu for store
+ *
+ * @see Queldorei_Navigation_Block_Navigation
+ */
+?>
+<?php
+/**
+ * $this->renderCategoriesMenuHtml() supports optional arguments:
+ * int Level number for list item class to start from
+ * string Extra class of outermost list items
+ * string If specified wraps children list in div with this class
+ */
+?>
+<!-- navigation BOF -->
+<?php $_menu = $this->renderCategoriesMenuHtml(0, 'level-top', 'sub-wrapper') ?>
+<?php if ($_menu): ?>
+<nav class="queldorei">
+  <div class="nav-top-title">
+    <div class="icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <a href="#"><?php echo $this->__('Shop'); ?></a>
+  </div>
+  <ul id="queldoreiNav">
+      <?php if (Mage::getStoreConfig('shoppersettings/navigation/home')): ?>
+    <li class="level0 level-top">
+      <a class="level-top root" href="#">
+        <span><?php echo $this->__('Shop'); ?></span>
+      </a>
+
+      <div class="sub-wrapper" style="left: -10000px;">
+        <ul class="level0">
+          <li class="">
+            <ol>
+                <?php $_helper = Mage::helper('catalog/category') ?>
+                <?php $_categories = $_helper->getStoreCategories() ?>
+                <?php if (count($_categories) > 0): ?>
+              <ul>
+                  <?php foreach ($_categories as $_category): ?>
+                  <?php 
+				  if( $_category->getId()== 245){
+					  
+				//$aaa = ' <li class="level1">
+				//	 <a href="'.$_helper->getCategoryUrl($_category).'" id="giftop">
+                //    <span>'.$_category->getName().'</span>
+               //   </a>';
+				  $aaa = ' <li class="level1">
+					 <a href="javascript:void(0);" id="giftop">
+                    <span>'.$_category->getName().'</span>
+                  </a>';
+         
+		$bbb = '';
+		$c = Mage::getModel('catalog/category')->getCategories(245);
+				if(count($c) > 0) {
+					$bbb .= '<div class="slidingDivTop" style="display:none;"><ul>';
+					foreach ($c as $ca) {
+						$bbb .= '<li><a href="'.$this->getCategoryUrl($ca).'">'.$this->escapeHtml($ca->getName()).'</a></li>';
+					}
+					$bbb .= '</ul></div>';
+				}
+				
+			echo  $aaa.$bbb."</li>";
+			} else{
+				  ?>
+                  
+                  
+                <li class="level1">
+
+                  <a href="<?php echo $_helper->getCategoryUrl($_category) ?>">
+                    <span><?php echo $_category->getName() ?></span>
+                  </a>
+                </li>
+                <?php } ?>
+                  <?php endforeach; ?>
+              </ul>
+                <?php endif; ?>
+            </ol>
+          </li>
+        </ul>
+      </div>
+    </li>
+      <?php endif; ?>
+    <li class="level0">
+      <a href="<?php echo $this->getUrl('press'); ?>">
+        <span><?php echo $this->__('Press'); ?></span>
+      </a>
+    </li>
+    <li class="level0">
+      <a href="<?php echo $this->getUrl('trunk-shows'); ?>">
+        <span><?php echo $this->__('Trunk Shows'); ?></span>
+      </a>
+    </li>
+    <li class="level0">
+      <a href="<?php echo $this->getUrl('about'); ?>">
+        <span><?php echo $this->__('About Jennifer'); ?></span>
+      </a>
+    </li>
+    <li class="level0">
+      <a href="<?php echo $this->getUrl('contact-us'); ?>">
+        <span><?php echo $this->__('Contact'); ?></span>
+      </a>
+    </li>
+
+      <?php
+      //            echo $_menu;
+      $custom_tab = Mage::getModel('cms/block')
+        ->setStoreId(Mage::app()->getStore()->getId())
+        ->load('shopper_navigation_block');
+      if ($custom_tab->getIsActive()) {
+          echo '
+            <li class="level0 level-top parent custom-block">
+                <a href="#" class="level-top">
+                    <span>' . $custom_tab->getTitle() . '</span>
+                </a>
+                <div class="sub-wrapper" style="width:' . Mage::getStoreConfig(
+              'shoppersettings/navigation/custom_block_width'
+          ) . 'px">' . $this->getLayout()->createBlock('cms/block')->setBlockId('shopper_navigation_block')->toHtml() . '</div>
+            </li>';
+      }
+      ?>
+  </ul>
+</nav>
+<?php endif ?>
+<!-- navigation EOF -->

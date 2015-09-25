@@ -1,0 +1,72 @@
+<?php if (!Mage::registry('current_category')) return ?>
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<?php
+/**
+ * Category left navigation
+ *
+ * @see Mage_Catalog_Block_Navigation
+ */
+?>
+<?php
+$cat_title = $this->getLayout()->getBlock('head')->getTitle();
+$cat_title = trim(strtolower($cat_title));
+$id=18;
+$title="Jewelry";
+if(strpos($cat_title, "accessories") !== FALSE||strpos($cat_title, "barcelona") !== FALSE)
+    {
+    $id=22;
+	$title="Accessories";
+    }
+if(strpos($cat_title, "gift") !== FALSE)
+    {
+    $id=27;
+	$title="Gift Guide";
+    }
+	
+if(strpos($cat_title, "sale") !== FALSE)
+    {
+    $id=25;
+	$title="Sale";
+    }
+    
+if(strpos($cat_title, "as seen") !== FALSE )
+    {
+    $id=63;
+	$title="As Seen In";
+    }
+
+?>
+<div id="nav-box">
+<h1 class="century"><?php echo $title; ?></h1>
+<div class="hr"></div>
+<?php
+$cats = Mage::getModel('catalog/category')->load($id)->getChildrenCategories();
+?>
+<ul>
+<?php foreach($cats as $category): ?>
+	<?php if ($this->isCategoryActive($category)) {$class = ' class="active"'; } else { $class=''; } ?>
+    <li<?php echo $class; ?>>
+        <a href="<?php echo $category->getUrl() ?>" title="View the products for this category"><?php echo $category->getName() ?></a>
+    </li>
+<?php endforeach; ?>
+</ul>
+</div>

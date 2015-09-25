@@ -1,0 +1,78 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<?php echo $this->getChildHtml('after_body_start') ?>
+<div id="border-container">
+  <div id="static-height-container">
+    <div class="wrapper"> <?php echo $this->getChildHtml('global_notices') ?>
+      <div class="page"> <?php echo $this->getChildHtml('header') ?>
+        <div class="main-container col2-left-layout">
+          <div class="main">
+            <div class="left" id="left-side">
+              <div id="nav-box">
+                <h1 class="century"><?php echo $this->getLayout()->getBlock('head')->getTitle(); ?></h1>
+                <div class="hr"></div>
+                <?php echo $this->getLayout()->getBlock('head')->getDescription(); ?> </div>
+              <div style="height:64px; margin-top:-20px;"><a href="http://www.facebook.com/pages/Jennifer-Miller-Jewelry/260916522181?"> <img border="0" width="29" height="29" src="<?php echo Mage::getURL('') ?>/media/upload/image/facebook-jm.png" style="margin: -8px 0pt 0pt; padding-right: 10px; position: absolute;" alt="" /></a> <span style="border: medium none; padding: 0pt 10pt 0pt 30px; font-size: smaller; display: block;"> <a href="http://www.facebook.com/pages/Jennifer-Miller-Jewelry/260916522181?">Become a Fan on Facebook</a> </span> <a href="http://twitter.com/JMJEWELRY"><img border="0" width="29" hspace="10" height="29" src="<?php echo Mage::getURL('') ?>/media/upload/image/twitter-jm.png" style="margin:9px 0pt 0pt; padding: 1px; position: absolute;" type="image" alt="" /></a> <span style="border: medium none; padding: 12pt 10pt 0pt 30px; font-size: smaller; display: block;"> <a href="http://twitter.com/JMJEWELRY">Follow us on Twitter</a> </span> </div>
+              
+              <!--
+   php mailer         
+                
+--> 
+              
+              <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('call-to-action-home')->toHtml(); ?>
+              <form action="<?php echo $this->getUrl('newsletter/subscriber/new') ?>" method="post" id="newsletter-validate-detail">
+                <label for="email">Get on the list for discounts, updates & specials!</label>
+                <input  type="text" name="email" id="newsletter"  maxlength="50" size="12">
+                <input type="submit" value="<?php echo $this->__('Sign up') ?>">
+              </form>
+              <div class="hr"></div>
+              <h2 class="script">Call a Jenny Girl</h2>
+              <span class="left">NYC</span><span class="right">212.734.8199</span><div class="clearer"></div>
+              <span class="left">East Hampton</span><span class="right">631.329.9061</span><div class="clearer"></div>
+              <span class="left">Southampton</span><span class="right">631.283.9061</span><div class="clearer"></div>
+              <span class="left">Palm Beach</span><span class="right">561.659.9095</span><span class="clearer"></span> </div>
+            <div class="right" id="right-side"> <?php echo $this->getChildHtml('global_messages') ?> <?php echo $this->getChildHtml('content') ?> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <?php echo $this->getChildHtml('footer') ?> <?php echo $this->getChildHtml('before_body_end') ?> </div>
+</div></div>
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('my_footer')->toHtml(); ?> <?php echo $this->getAbsoluteFooter() ?>
+</body>
+</html>

@@ -1,0 +1,816 @@
+<?php 
+
+if (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/module_enabled')) {
+
+	// note if you installed magento in a different directory and are using the popup
+	// collector on just the homepage you may need to alter this to be something different
+
+	$homepage_url = parse_url(Mage::getBaseUrl(), PHP_URL_PATH);
+
+?>
+
+<script>
+<?php
+$debug_mode = false;
+if (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/debug_mode')) {
+	$debug_mode = Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/debug_mode');
+}
+$forcereg = false;
+if (Mage::getStoreConfig('tegdesign_emailcollector_options/regopts/forcereg')) {
+	$forcereg = Mage::getStoreConfig('tegdesign_emailcollector_options/regopts/forcereg');
+}
+$show_close_x = false;
+if (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/show_close_x')) {
+	$show_close_x = Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/show_close_x');
+}
+$email_validation = false;
+if (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/email_validation')) {
+	$email_validation = Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/email_validation');
+}
+if (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/track')) {
+	$track = Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/track');
+} else {
+	$track = 'dont_track';
+}
+if (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/labels')) {
+	$label_type = Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/labels');
+} else {
+	$label_type = 'label';
+}
+$placeholder = false;
+$email_placeholder = '';
+$password_placeholder = '';
+if ($label_type == 'label') {
+
+	$epc_label = 'block';
+
+} elseif ($label_type == 'placeholder') {
+
+	$epc_label = 'none';
+	$placeholder = true;
+	$email_placeholder = 'placeholder="Email Address"';
+	$password_placeholder = 'placeholder="Password"';
+
+	if (!$forcereg)
+		$email_placeholder = 'placeholder="Enter email here for special offers list."';
+
+} elseif ($label_type == 'both') {
+
+	$epc_label = 'block';
+	$placeholder = true;
+	$email_placeholder = 'placeholder="Email Address"';
+	$password_placeholder = 'placeholder="Password"';
+
+}
+?>
+function email_collector_track(track) {
+<?php if ($track != 'dont_track') { ?>
+	try {
+		<?php if ($track == 'google_analytics_analyticsjs') { ?>
+			ga('send', 'event', 'email_collector', track, 'Email Collector: ' + track);
+		<?php } ?>
+		<?php if ($track == 'google_analytics_gajs') { ?>
+			_gaq.push(['_trackEvent', 'email_collector', track, 'Email Collector: ' + track]);
+		<?php } ?>
+		<?php if ($track == 'mixpanel') { ?>
+			mixpanel.track('email_collector', {
+			    'action': track
+			});
+		<?php } ?>
+	} catch(err) {
+
+	} 
+<?php } ?>
+}
+document.observe("dom:loaded", function() {
+	var show_email_collector = true;
+	var show_email_collector_mobile = false;
+	<?php 
+	if (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_all_pages_except_homepage')) { 
+	?>
+	var navPath = (window.location.pathname.substr(-1) === '/') ? window.location.pathname : window.location.pathname + '/';
+	if (navPath == '/' || navPath == '<?php echo $homepage_url; ?>') {
+		show_email_collector = false;
+	} else {
+		show_email_collector = true;
+	}
+	<?php 
+	} elseif (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_only_homepage')) { 
+	?>
+	var navPath = (window.location.pathname.substr(-1) === '/') ? window.location.pathname : window.location.pathname + '/';
+	if (navPath == '/' || navPath == '<?php echo $homepage_url; ?>') {
+		show_email_collector = true;
+	} else {
+		show_email_collector = false;
+	}
+	<?php 
+	} elseif (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/additional_paths')) {
+
+		$additional_paths = Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/additional_paths');
+	?>
+	show_email_collector = false;
+	var navPath = (window.location.pathname.substr(-1) === '/') ? window.location.pathname : window.location.pathname + '/';
+
+	var tmp = '<?php echo $additional_paths; ?>';
+	var additional_paths = tmp.split(',');
+	show_email_collector = false;
+
+	if (navPath.length > 1) {
+		navPath = navPath.replace(/\/$/, "");
+	}
+
+	var length = additional_paths.length;
+    for(var i = 0; i < length; i++) {
+		if (additional_paths[i].length > 1) {
+			additional_paths[i] = additional_paths[i].replace(/\/$/, "");
+		}
+        if (additional_paths[i] == navPath) {
+        	show_email_collector = true;
+        } 
+    }
+	<?php
+
+	}
+
+	?>
+	if (viewport().width < 480) {
+		<?php if (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/show_responsive_on_mobile')) { ?>
+		show_email_collector = true;
+		show_email_collector_mobile = true;
+		<?php } else { ?>
+		show_email_collector = false;
+		<?php } ?>
+	}
+
+	<?php
+
+		if (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/cookie_expires')) {
+			$cookie_expires = (int)Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/cookie_expires');
+		} else {
+			$cookie_expires = 365;
+		}
+
+		if (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_heading')) {
+			$popup_heading = htmlspecialchars(Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_heading'), ENT_QUOTES);
+		} else {
+			$popup_heading = 'Heading Goes Here';
+		}
+
+		if (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_subtxt')) {
+			$popup_subtxt = htmlspecialchars(Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_subtxt'), ENT_QUOTES);
+			$popup_subtxt = nl2br($popup_subtxt);
+			$popup_subtxt = preg_replace( "/\r|\n/", "", $popup_subtxt);
+		} else {
+			$popup_subtxt = 'Sub Text Goes Here';
+		}
+
+		if (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_footertxt')) {
+			$popup_footertxt = htmlspecialchars(Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_footertxt'), ENT_QUOTES);
+			$popup_footertxt = nl2br($popup_footertxt);
+			$popup_footertxt = preg_replace( "/\r|\n/", "", $popup_footertxt);
+		} else {
+			$popup_footertxt = 'Footer Text Goes Here';
+		}
+
+		if (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_opacity')) {
+			$popup_opacity = Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_opacity');
+		} else {
+			$popup_opacity = 0.8;
+		}
+
+		if (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_fancy')) {
+			$popup_fancy = Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_fancy');
+		} else {
+			$popup_fancy = false;
+		}
+
+		if (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_btntxt')) {
+			$popup_btntxt = Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_btntxt');
+			$popup_btntxt = str_replace("'", "\'", $popup_btntxt);
+
+		} else {
+			$popup_btntxt = "Ok";
+		}
+
+		if (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_delay')) {
+			$popup_delay = (int)Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_delay');
+		} else {
+			$popup_delay = 800;
+		}
+
+		if (Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_btncancel')) {
+			$popup_btncancel = Mage::getStoreConfig('tegdesign_emailcollector_options/promosettings/popup_btncancel');
+			$popup_btncancel = str_replace("'", "\'", $popup_btncancel);
+		} else {
+			$popup_btncancel = "No Thanks";
+		}
+	?>
+<?php
+
+/*
+
+	If you choose to force the customer to register for a account on your store
+	you can customize the output below
+
+*/
+
+$input_field_width = '460px';
+
+$input_fields = <<<EOT
+
+	<span class="epc_label" style="display:$epc_label;">E-mail Address:</span>
+	<input type="email" autocapitalize="off" autocorrect="off" name="popup_email" id="popup_email" size="25" $email_placeholder class="email_collector_box" style="width: $input_field_width;">
+
+EOT;
+
+if ($forcereg) {
+
+$input_fields = <<<EOT
+
+	<span class="epc_label" style="display:$epc_label;">E-mail Address:</span>
+	<input type="email" autocapitalize="off" autocorrect="off" name="popup_email" id="popup_email" size="25" $email_placeholder class="email_collector_box" style="width: $input_field_width;">
+
+	<span class="epc_label" style="display:$epc_label;">Password:</span>
+	<input type="password" name="password" id="password" title="Password" $password_placeholder style="width: $input_field_width;">
+
+EOT;
+
+/*
+
+Legend of Magento attribute input types:
+	
+	Button, Checkbox, Checkboxes, Collection, Column, Date, Editor, Fieldset, File, Gallery, Hidden, Image, Imagefile, Label, Link, Multiline, Multiselect, Note, Obscure, Password, Radio, Radios, Reset, Select, Submit, Text, Textarea, Time
+
+	Right we only support : select, text, date, and textarea
+
+*/
+
+	if (Mage::getStoreConfig('tegdesign_emailcollector_options/regopts/extra_fields')) {
+
+		$extra_fields = Mage::getStoreConfig('tegdesign_emailcollector_options/regopts/extra_fields');
+		$extra_fields_html = '';
+		$extra_fields = explode(',', $extra_fields);
+
+		foreach ($extra_fields as $field) {
+
+			$attr = Mage::getSingleton('eav/config')->getAttribute('customer', $field);
+
+			if ($attr->getFrontendLabel()) {
+
+				$extra_fields_html .= '<span class="' . $epc_label . '" style="display:'.$epc_label.';">';
+				$extra_fields_html .= $attr->getFrontendLabel();
+				$extra_fields_html .= '</span>';
+
+				if ($attr->usesSource()) {
+
+				    $options = $attr->getSource()->getAllOptions(false);
+
+				    if ($attr->getFrontendInput() == 'select') {
+
+				    	$extra_fields_html .= '<select name="'.$field.'" id="'.$field.'">';
+
+				    	foreach ($options as $opt) {
+				    		$extra_fields_html .= '<option value="' . $opt['value'] . '">' . $opt['label'] . '</option>';
+				    	}
+
+				    	$extra_fields_html .= '</select>';
+
+				    }
+
+				} else {
+
+					if ($attr->getFrontendInput() == 'text') {
+
+						$extra_fields_html .= '<input type="text" name="'.$field.'" id="'.$field.'" placeholder="' . ($placeholder ? $attr->getFrontendLabel() : '') . '" style="width: ' . $input_field_width . '">';
+
+					} elseif ($attr->getFrontendInput() == 'date') {
+
+						$extra_fields_html .= '<input type="text" name="epcdate_'.$field.'" id="'.$field.'" value="" title="'.$attr->getFrontendLabel().'" />';
+
+					} elseif ($attr->getFrontendInput() == 'textarea') {
+
+						$extra_fields_html .= '<textarea name="'.$field.'" id="'.$field.'" /></textarea>';
+
+					}
+
+				}
+
+				
+			}
+
+		}
+
+		$input_fields = $input_fields . $extra_fields_html;
+	}
+
+}
+
+/*
+
+	Tips on customizing the design of this extension.
+	The HTML code below is incased in a HERDOC style PHP variable.
+
+	Feel free to edit the HTML to match your design. In order to keep
+	functionality of the extension please keep the id attributes and class names
+	of the standard elements needed.
+
+	I have included a few different styles for reference. They are commented out below.
+
+*/
+
+/* Example Style 1: */
+$modal_content = <<<EOT
+
+	<img class="email_collector_text" src="/skin/frontend/base/default/images/tegdesign_emailcollector/email_collector_heading.png" />
+
+	<h3 style="text-align:center;" class="email_collector_heading" id="email_collector_heading">
+	
+		$popup_heading
+
+	</h3>
+
+	<div class="email_collector_subtxt" id="email_collector_subtxt">
+
+		<div class="subtxt">
+
+			$popup_subtxt
+
+		</div>
+
+		$input_fields
+
+	</div>
+
+	<p class="email_collector_footer" id="email_collector_footer" style="text-align: center;">
+
+		$popup_footertxt
+
+	</p>
+
+
+EOT;
+
+/* Example Style 2: */ 
+/*
+$modal_content = <<<EOT
+
+	<h3 style="text-align:center;" class="email_collector_heading" id="email_collector_heading">
+	
+		$popup_heading
+	
+	</h3>
+
+	<div style="width: 200px; position: relative; float: left;">
+
+		<img src="http://www.tegdesign.com/email-collector/example-book.png" width="150" height="150">
+
+	</div>
+
+	<div style="width: 350px; position: relative; float: left;">
+
+		<p class="email_collector_subtxt" id="email_collector_subtxt" style="padding-left:0px;">
+
+			$popup_subtxt
+
+		</p>
+
+		$input_fields
+
+	</div>
+
+	<p class="email_collector_footer" id="email_collector_footer">
+
+		$popup_footertxt
+
+	</p>
+
+EOT;
+
+*/
+
+
+if ($show_close_x) {
+	$modal_content = '<div class="btn_x_close" onclick="btn_x_close();">&nbsp;</div>' . $modal_content;
+}
+
+// remove line breaks from html
+$modal_content = str_replace(array("\r\n", "\r"), "\n", $modal_content);
+$lines = explode("\n", $modal_content);
+$new_lines = array();
+
+foreach ($lines as $i => $line) {
+    if(!empty($line))
+        $new_lines[] = trim($line);
+}
+
+$modal_content = implode($new_lines);
+?>
+	var modal_content = '<?php echo $modal_content; ?>';
+
+	<?php if (!$popup_fancy) { ?>
+
+		<?php if (!$debug_mode) { ?>
+
+		if (show_email_collector) {
+			if (document.cookie.indexOf('email_collector=true') == -1) {
+
+				setTimeout(function() {
+
+					var expTime = 1000*60*60*24*<?php echo $cookie_expires;?>;
+					var expires = new Date((new Date()).valueOf() +  expTime);
+					document.cookie = "email_collector=true;expires=" +  expires.toUTCString();
+
+					new Modal({
+						mobile: show_email_collector_mobile,
+						content: modal_content, 
+						cancelButton: true, 
+						opacity: <?php echo $popup_opacity;?>,
+						afterShow: function() {
+							email_collector_track('show');
+						},
+						afterClose: function() { 
+							email_collector_track('close');
+						}
+					});
+
+				}, <?php echo $popup_delay; ?>);
+
+			}
+		}
+
+		<?php } else { ?>
+
+			if (show_email_collector) {
+				new Modal({
+					mobile: show_email_collector_mobile,
+					content: modal_content, 
+					cancelButton: true,
+					opacity: <?php echo $popup_opacity;?>,
+					afterShow: function() {
+						email_collector_track('show');
+					},
+					afterClose: function() { 
+						email_collector_track('close');
+					}
+				});
+			}
+
+		<?php } ?>
+
+	<?php } else { ?>
+
+		<?php if (!$debug_mode) { ?>
+
+		if (show_email_collector) {
+			if (document.cookie.indexOf('email_collector=true') == -1) {
+
+				setTimeout(function() {
+
+					var expTime = 1000*60*60*24*<?php echo $cookie_expires;?>;
+					var expires = new Date((new Date()).valueOf() +  expTime);
+					document.cookie = "email_collector=true;expires=" +  expires.toUTCString();
+
+					new Modal({
+						mobile: show_email_collector_mobile,
+						content: modal_content,
+						opacity: <?php echo $popup_opacity;?>,
+						afterShow: function() {
+							email_collector_track('show');
+						},
+						afterClose: function() { 
+							email_collector_track('close');
+						},
+						showContainerEffect: function(self){ 
+							self.container.grow(); 
+						},
+						showOverlayEffect: function(overlay, self){ 
+							new Effect.Parallel([
+								new Effect.BlindDown(overlay, { 
+									sync: true 
+								}), 
+								new Effect.Opacity(overlay, { 
+									sync: true, 
+									from: 0, 
+									to: self.options.opacity 
+								}) 
+							], { duration: 1 });
+						},
+						hideOverlayEffect: function(overlay, self){ 
+							new Effect.Parallel([
+								new Effect.BlindUp(overlay, { 
+									sync: true 
+								}), 
+								new Effect.Opacity(overlay, { 
+									sync: true, 
+									from: self.options.opacity, 
+									to: 0 
+								}) 
+							], { 
+								duration: 1 
+							});
+						},
+						closeEffect: function(self){ 
+							self.container.puff({ 
+								duration: 0.4, 
+								afterFinish: function(){ 
+									container.remove(); 
+								} 
+							}); 
+						}
+					});
+
+				}, <?php echo $popup_delay; ?>);
+
+			}
+		}
+
+		<?php } else { ?>
+
+			if (show_email_collector) {
+				new Modal({
+					mobile: show_email_collector_mobile,
+				  	content: modal_content,
+					opacity: <?php echo $popup_opacity;?>,
+					afterShow: function() {
+						email_collector_track('show');
+					},
+					afterClose: function() { 
+						email_collector_track('close');
+					},
+					showContainerEffect: function(self) { 
+						self.container.grow(); 
+					},
+					showOverlayEffect: function(overlay, self) { 
+						new Effect.Parallel([
+							new Effect.BlindDown(overlay, { 
+								sync: true 
+							}), 
+							new Effect.Opacity(overlay, { 
+								sync: true, 
+								from: 0, 
+								to: self.options.opacity 
+							}) 
+						], { 
+							duration: 1 
+						});
+					},
+					hideOverlayEffect: function(overlay, self) { 
+						new Effect.Parallel([
+							new Effect.BlindUp(overlay, { 
+								sync: true 
+							}), 
+							new Effect.Opacity(overlay, { 
+								sync: true, 
+								from: self.options.opacity, 
+								to: 0 
+							}) 
+						], { 
+							duration: 1 
+						});
+					},
+					closeEffect: function(self) {
+						self.container.puff({ 
+							duration: 0.4, 
+							afterFinish: function() { 
+								container.remove(); 
+							} 
+						}); 
+					}
+				});
+
+			}
+
+		<?php } ?>
+
+	<?php } ?>
+      
+});
+
+
+
+var Modal = Class.create({
+		initialize: function() {
+			var defaults = {
+				mobile: false,
+				container: document.body,
+				opacity: 0.1,
+				overlay: true,
+				zIndex: 1,
+				overlayId: 'modal_overlay',
+				containerId: 'modal_window_wrapper',
+				content: '',
+				contentId: 'modal_content_wrapper',
+				buttonContainerId: "modal_buttons_wrapper",
+				okButton: true,
+				okButtonHtml: '<input id="modal_ok_button" class="email_collector_popup_ok_button" type="submit" name="ok" value="<?php echo $popup_btntxt; ?>" />',
+				okButtonId: 'modal_ok_button',
+				cancelButton: true,
+				cancelButtonHtml: '<input id="modal_cancel_button" class="email_collector_popup_cancel_button" type="button" name="cancel" value="<?php echo $popup_btncancel; ?>" />',
+				cancelButtonId: 'modal_cancel_button',
+				html: '\
+				  <form action="<?php echo Mage::getBaseUrl();?>emailcollector/go/join" method="POST" id="email_collector_form"><div class="modal_window_wrapper" id="modal_window_wrapper">\
+				    <div class="modal_content_wrapper" id="modal_content_wrapper"></div>\
+				    <div class="modal_buttons_wrapper" id="modal_buttons_wrapper"></div>\
+				  </div><input type="hidden" id="store_id" name="store_id" value="<?php echo Mage::app()->getStore()->getStoreId();?>"></form>\
+				',
+				onOkButton: function(){ return true; },
+				onCancelButton: function(){ return true; },
+				afterShow: function() { return true; },
+				afterClose: function() { return true; },
+				showContainerEffect: function(self){ self.container.appear(); },
+				showOverlayEffect: function(overlay, self){ new Effect.Opacity(overlay, { from: 0, to: self.options.opacity, duration: 0.1 }); },
+				hideOverlayEffect: function(overlay, self){ new Effect.Opacity(overlay, { from: self.options.opacity, to: 0, duration: 0.3, afterFinish: function(){ overlay.remove() } }); },
+				closeEffect: function(self){ Effect.Fade(self.container, { duration: .4, afterFinish: function(){ container.remove(); } }); }
+			};
+			this.options = Object.extend(defaults, arguments[0] || { });
+			this.initialized = false;
+			this.init();
+		}, init: function() {
+
+			try {
+
+				if (this.initialized) {
+					return true;
+				} else {
+					this.initialized = true;
+				}
+				
+				this.showOverlay();
+				
+				var container = document.createElement('div');
+				container.update(this.options.html);
+				this.options.container.insertBefore(container, this.options.container.firstChild);
+				
+				this.container = $(this.options.containerId);
+				this.container.setStyle({zIndex: 100 + parseInt(this.options.zIndex, 10), position: 'absolute', display: 'none'});
+				
+				this.buildButtons();
+				this.setContent(this.options.content);
+				
+				this.show();
+
+			} catch(err) {
+
+				// ie errror
+				$('modal_overlay').hide();
+				$('modal_window_wrapper').hide();
+
+			}
+
+		}, buildButtons: function() {
+			if (this.options.okButton) {
+				var container = document.createElement('span');
+				container.update('<span>' + this.options.okButtonHtml + '</span>');
+				$(this.options.buttonContainerId).insertBefore(container, $(this.options.buttonContainerId).firstChild);
+
+				Event.observe($(this.options.okButtonId), 'click', this.ok.bind(this));
+			}
+
+			if (this.options.cancelButton) {
+				var container = document.createElement('span');
+				container.update('<span>' + this.options.cancelButtonHtml + '</span>');
+				$(this.options.buttonContainerId).insertBefore(container, $(this.options.buttonContainerId).firstChild);
+
+				Event.observe($(this.options.cancelButtonId), 'click', this.cancel.bind(this));
+			}
+		}, ok: function(e) {
+
+			<?php if ($email_validation) { ?>
+		    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		    if (!re.test($('popup_email').value)) {
+		    	alert('The email address you entered is invalid.');
+		    	e.stop();
+				return false;
+			}
+			<?php } ?>
+			<?php if ($forcereg) { ?>
+				if (document.getElementById("password")){
+					if (document.getElementById("password").value.length < 6) {
+						alert('Please enter a password of 6 or more characters.');
+						e.stop();
+						return false;
+					}
+				}
+				// Example of validation of extra fields you add
+				// if (document.getElementById("firstname")){
+				// 		if (document.getElementById("firstname").value.length == 0) {
+				// 			alert('Please enter a first name.');
+				// 			e.stop();
+				// 			return false;
+				// 		}
+				// }
+			<?php } ?>
+
+			$('email_collector_subtxt').hide();
+			$('popup_email').hide();
+			$('email_collector_footer').hide();
+			$('modal_buttons_wrapper').hide();
+
+			// hide any other images you may have added to the popup collector
+			$$('#modal_content_wrapper img').each(Element.hide);
+
+			$('email_collector_heading').update('<div style="padding-top:25px; padding-bottom:25px;"><h3 class="email_collector_heading">Please wait...</h3><div class="loading-graphic">&nbsp;</div></div>');
+
+			setTimeout(function() {
+				$('email_collector_form').submit();
+			}, 500);
+
+
+		}, cancel: function() {
+			this.close(this.options.onCancelButton);
+		}, setContent: function(content) {
+      		if("string" == typeof(content).toLowerCase()) {
+				$(this.options.contentId).update(content);
+			} else {
+		        var elem = content.cloneNode(true);
+		        elem.id = "yapopup_" + elem.id;
+		        $(this.options.contentId).appendChild(elem);
+			}
+		}, close: function(callback) {
+			// if ((callback && callback(this)) || null == callback) {
+			// 	this.hideOverlay();
+			// 	this.options.closeEffect(this);
+			// 	this.options.afterClose();
+			// }
+			$('modal_overlay').hide();
+			$('modal_window_wrapper').hide();
+		}, show: function() {
+			var containerDimensions = this.container.getDimensions();
+
+
+
+			if (this.options.mobile) {
+
+				var top = (viewport().height - containerDimensions.height) / 2;
+				
+				var left = 0;
+
+			} else {
+
+				var top = ((document.viewport.getDimensions().height - containerDimensions.height) / 2) + document.viewport.getScrollOffsets().top;
+				var left = (this.options.container.offsetWidth / 2) - (containerDimensions.width / 2);
+
+			}
+			
+			this.container.setStyle({
+				'top': this.options.top || Math.floor(top) + 'px',
+				'left': this.options.left || Math.floor(left) + 'px'
+			})
+			
+			this.options.showContainerEffect(this);
+			this.padRootElement();
+			this.options.afterShow(this);
+		}, padRootElement: function() {
+			if (this.options.container.clientHeight < this.container.clientHeight) {
+				var container = document.createElement('div');
+				container.update('<span></span>');
+				var dist = this.container.clientHeight - this.options.container.clientHeight;
+				container.setStyle({height: dist + this.container.scrollTop + 'px', display: 'block'});
+				this.options.container.appendChild(container);
+			}
+		}, skipOverlay: function() {
+			return this.options.overlay == false || this.options.opacity === null;
+		}, showOverlay: function() {
+			if (this.skipOverlay()) return;
+			if ($(this.options.overlayId) == null) {
+				var overlay = document.createElement('div');
+				overlay.id = this.options.overlayId;
+				this.options.container.insertBefore(overlay, this.options.container.firstChild);
+			}
+			$(this.options.overlayId).setStyle({position: 'fixed', 
+				top: '0px',
+				left: '0px',
+				height: '100%',
+				width: '100%',
+				backgroundColor: '#000',
+				zIndex: '100',
+				opacity: 0
+			});
+
+			// comment this out if you dont want them to be able to close the window by
+			// clicking the overlay
+			//$(this.options.overlayId).setAttribute("onclick", "btn_x_close();");
+
+      		this.options.showOverlayEffect($(this.options.overlayId), this);
+				return false;
+			}, hideOverlay: function() {
+				if (this.skipOverlay()) return;
+				this.options.hideOverlayEffect($(this.options.overlayId), this);
+				return false;
+			}
+});
+function viewport(){
+    var e = window;
+    var a = 'inner';
+    if (!('innerWidth' in window)){
+        a = 'client';
+        e = document.documentElement || document.body;
+    }
+    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] }
+}
+function btn_x_close () {
+	$('modal_overlay').hide();
+	$('modal_window_wrapper').hide();
+}
+</script>
+<?php } ?>
